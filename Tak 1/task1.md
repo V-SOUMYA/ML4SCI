@@ -105,7 +105,7 @@ One gluon (top row) and one quark (bottom row) across all 3 channels.
 HCAL shows the most visible structure. The square blocks are how the hadronic calorimeter records energy.
 Most of the image is black. Jet events are sparse by nature, so that is expected.
 
----
+
 
 ## Reconstruction: Gluon
 
@@ -113,7 +113,7 @@ Most of the image is black. Jet events are sparse by nature, so that is expected
 
 Left 3 columns are the originals. Right 3 columns are the reconstructed versions.
 
----
+
 
 ## Results
 
