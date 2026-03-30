@@ -1,5 +1,4 @@
 # ML4SCI GENIE — GSoC 2026
-### Soumya Vajahhala | Rutgers University
 
 This repo contains my solutions to the ML4SCI GENIE evaluation tasks for Google Summer of Code 2026.
 The project I am applying for is **Learning Parametrization with Implicit Neural Representations**.
