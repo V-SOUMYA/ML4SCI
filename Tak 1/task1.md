@@ -99,7 +99,8 @@ Finally, the trained model weights are saved to Google Drive.
 
 ## Raw events
 
-![Raw Events](raw_events.png)
+<img width="900" height="590" alt="image" src="https://github.com/user-attachments/assets/8b103158-1a3b-433f-b66a-7f81b0bb8e5b" />
+
 
 One gluon (top row) and one quark (bottom row) across all 3 channels.
 HCAL shows the most visible structure. The square blocks are how the hadronic calorimeter records energy.
@@ -109,15 +110,7 @@ Most of the image is black. Jet events are sparse by nature, so that is expected
 
 ## Reconstruction: Gluon
 
-![Gluon Reconstruction](reconstruction_gluon.png)
-
-Left 3 columns are the originals. Right 3 columns are the reconstructed versions.
-
----
-
-## Reconstruction: Quark
-
-![Quark Reconstruction](reconstruction_quark.png)
+<img width="651" height="541" alt="image" src="https://github.com/user-attachments/assets/82ec55e6-8de6-4cb2-95eb-85687559235f" />
 
 Left 3 columns are the originals. Right 3 columns are the reconstructed versions.
 
