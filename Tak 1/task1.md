@@ -28,6 +28,7 @@ The project I am applying for is **Learning Parametrization with Implicit Neural
     └── README.md
 ```
 
+
 ---
 
 # Task 1 — Autoencoder for Quark/Gluon Jet Events
@@ -55,24 +56,15 @@ If the reconstruction looks close to the original, the model has learned the str
 
 ## Code walkthrough
 
-**Cell 1: Load data**
-Opens the HDF5 file from Google Drive and reads the first 5000 events.
-5000 is enough to train on and keeps things fast on Colab.
+The code is one continuous script. Here is what it does in order.
 
-**Cell 2: Normalize**
-Each channel is scaled to [0, 1] by dividing by its max value.
-Shape goes from `(5000, 125, 125, 3)` to `(5000, 3, 125, 125)` because PyTorch expects channels first.
+First it loads the HDF5 file from Google Drive and reads the first 5000 events. Each channel is then scaled to [0, 1] by dividing by its max value. The shape changes from `(5000, 125, 125, 3)` to `(5000, 3, 125, 125)` because PyTorch expects channels first.
 
-**Cell 3: Visualize raw events**
-Picks one gluon and one quark and plots all 3 channels side by side.
-Just to see what the data looks like before any training.
+One gluon and one quark are plotted across all 3 channels so you can see what the raw data looks like before training.
 
-**Cell 4: DataLoaders**
-Splits data into train, val, and test.
-Wraps them in DataLoaders so the model sees images in batches of 32 during training.
+The data is split into train, val, and test sets. DataLoaders feed the model images in batches of 32 during training.
 
-**Cell 5: Autoencoder model**
-Two parts:
+The autoencoder has two parts:
 - Encoder: 3 conv layers that shrink the image down to a 128-number vector
 - Decoder: rebuilds the image from those 128 numbers back to 125x125
 
@@ -92,31 +84,16 @@ Decoder:
 
 Total parameters: **3,765,955**
 
-**Cell 6: Training**
-Runs 30 epochs. Each epoch does three things:
-1. Feeds a batch of images into the autoencoder
-2. Computes how different the reconstruction is from the original using MSE loss
-3. Updates model weights to reduce that error
+Training runs for 30 epochs. Each epoch feeds batches into the model, computes MSE loss between the reconstruction and the original, and updates the weights. The same is done on validation data without updating anything. Loss is printed every 5 epochs.
 
-Then checks the same on validation data without updating anything.
-Prints loss every 5 epochs.
+After training, a batch from the test set is run through the model and plotted as a side by side comparison. Left 3 columns are the originals, right 3 are the reconstructions.
 
-**Cell 7: Loss curve**
-Plots train and val loss over 30 epochs.
-Both lines should drop and flatten. That means the model converged.
-
-**Cell 8: Side by side comparison**
-Takes a batch from the test set, runs it through the model, and plots original vs reconstructed.
-Left 3 columns are the originals. Right 3 columns are what the model rebuilt.
-
-**Cell 9: Metrics**
-Computes 3 numbers across the test set to measure how good the reconstruction is:
+Three metrics are then computed on the full test set:
 - **MSE**: average pixel error. Lower is better.
 - **PSNR**: signal quality in decibels. Higher is better. Above 40 dB is excellent.
-- **SSIM**: how similar the structure looks, from 0 to 1. Above 0.95 is very good.
+- **SSIM**: structural similarity from 0 to 1. Above 0.95 is very good.
 
-**Cell 10: Save**
-Saves the trained model weights to Google Drive so nothing is lost if Colab disconnects.
+Finally, the trained model weights are saved to Google Drive.
 
 ---
 
