@@ -34,7 +34,6 @@ The project I am applying for is **Learning Parametrization with Implicit Neural
 # Task 1 — Autoencoder for Quark/Gluon Jet Events
 **ML4SCI GENIE | GSoC 2026 | Soumya Vajahhala**
 
----
 
 ## What I did
 
@@ -42,7 +41,7 @@ Trained a convolutional autoencoder on 5000 jet events.
 The model compresses each 125x125 image into 128 numbers, then rebuilds it back.
 If the reconstruction looks close to the original, the model has learned the structure of the jet.
 
----
+
 
 ## Dataset
 
