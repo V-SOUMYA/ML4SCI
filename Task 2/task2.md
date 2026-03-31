@@ -1,5 +1,4 @@
 # Task 2 and Specific Task 2
-**ML4SCI GENIE | GSoC 2026 | Soumya Vajahhala**
 
 ---
 
@@ -55,9 +54,8 @@ Training runs for up to 30 epochs. Loss is CrossEntropy. Optimizer is Adam.
 
 ### Outputs
 
-![ROC Curve](gnn_roc_curve.png)
+<img width="586" height="489" alt="image" src="https://github.com/user-attachments/assets/18bb43d6-ad30-450f-886d-bad7f43a0b3c" />
 
-![Training Curves](gnn_training_curves.png)
 
 The ROC curve is above the random baseline line. AUC of 0.67 is reasonable for a small dataset of 5000 events. The literature reports 0.70 to 0.78 for GNNs on this dataset with much larger training sets.
 
@@ -119,17 +117,20 @@ PSNR above 50 dB and SSIM above 0.97 across all channels means the INR is recons
 
 **Side by side comparison: Gluon events**
 
-![INR Gluon Reconstruction](inr_reconstruction_gluon.png)
+<img width="1259" height="537" alt="image" src="https://github.com/user-attachments/assets/2c19186d-804e-4cfb-9535-f8000c9bb8bd" />
+
 
 Left 3 columns are the originals. Right 3 are the INR reconstructions.
 
 **Side by side comparison: Quark events**
 
-![INR Quark Reconstruction](inr_reconstruction_quark.png)
+<img width="1258" height="528" alt="image" src="https://github.com/user-attachments/assets/8b704b1d-3d7a-4f0b-9563-8af47f8d6ce6" />
+
 
 **Resolution independence demo**
 
-![INR Resolution Demo](inr_resolution_demo.png)
+<img width="1256" height="324" alt="image" src="https://github.com/user-attachments/assets/aa983ae4-66de-42b4-95f0-c26d95e8b4a6" />
+
 
 The same trained INR weights are queried at 64x64, 125x125, and 250x250. The energy structure stays consistent across all resolutions. This is something a regular image cannot do.
 
