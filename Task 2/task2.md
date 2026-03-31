@@ -65,7 +65,7 @@ EdgeConv was chosen because it naturally handles point cloud data. It does not a
 
 The main limitation is the cap of 100 nodes per graph. I kept the 100 highest energy pixels to save memory. This discards some low energy deposits that could carry useful information. With more compute, removing this cap would likely improve AUC.
 
----
+
 
 ## Specific Task 2: INR for Jet Event Representation
 
@@ -134,7 +134,7 @@ Left 3 columns are the originals. Right 3 are the INR reconstructions.
 
 The same trained INR weights are queried at 64x64, 125x125, and 250x250. The energy structure stays consistent across all resolutions. This is something a regular image cannot do.
 
----
+
 
 ## How to run
 
