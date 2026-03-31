@@ -1,5 +1,4 @@
 # Task 2: Jets as Graphs (GNN Classifier)
-
 ---
 
 ### What I did
