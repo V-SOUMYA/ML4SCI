@@ -1,6 +1,5 @@
 # Task 2 and Specific Task 2
 
----
 
 ## Task 2: Jets as Graphs (GNN Classifier)
 
