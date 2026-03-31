@@ -1,6 +1,5 @@
 # Task 2: Jets as Graphs (GNN Classifier)
-
-
+---
 ### What I did
 
 Converted jet images into graphs and trained a Graph Neural Network to classify them as quark or gluon.
@@ -139,7 +138,6 @@ Both files are standalone scripts. Run them in Google Colab with the dataset mou
 
 1. Open the script in Colab
 2. Make sure GPU is enabled (Runtime > Change runtime type > T4 GPU)
-3. Run all cells top to bottom
 
 For Task 2, install PyTorch Geometric first:
 ```
