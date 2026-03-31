@@ -37,7 +37,7 @@ for c in range(3):
     if ch_max > 0:
         images[:, :, :, c] /= ch_max
  
-# PyTorch wants (N, C, H, W) 
+# PyTorch - (N, C, H, W) 
 images = images.transpose(0, 3, 1, 2)   # (5000, 3, 125, 125)
 print(f"After transpose: {images.shape}")
 print(f"Value range: [{images.min():.2f}, {images.max():.2f}]")
@@ -117,7 +117,7 @@ class Encoder(nn.Module):
  
  
 class Decoder(nn.Module):
-    # Reconstructs vector of size 128 to (3, 125, 125)
+    
     def __init__(self):
         super().__init__()
         self.fc = nn.Linear(128, 64 * 15 * 15)
@@ -159,7 +159,7 @@ n_params = sum(p.numel() for p in model.parameters())
 print(f"Model parameters: {n_params:,}")
 
 optimizer = torch.optim.Adam(model.parameters(), lr=1e-3)
-scaler = torch.cuda.amp.GradScaler()   # for mixed precision
+scaler = torch.cuda.amp.GradScaler()   
 
 train_losses, val_losses = [], []
 NUM_EPOCHS = 30
@@ -207,7 +207,7 @@ print("Training done.")
 
 model.eval()
  
-# Grab one batch from the test set
+# One batch from the test set
 X_test_batch, y_test_batch = next(iter(test_loader))
  
 with torch.no_grad():
