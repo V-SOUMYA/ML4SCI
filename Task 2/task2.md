@@ -40,7 +40,7 @@ Classifier -> 2 outputs (quark / gluon)
 
 Training runs for up to 30 epochs. Loss is CrossEntropy. Optimizer is Adam.
 
-### Problem we ran into
+### Problems I ran into
 
 **Overfitting.** In the first run, train accuracy hit 94% while val accuracy stayed at 64%. The model was memorising the training data instead of learning general patterns.
 
@@ -65,7 +65,7 @@ The ROC curve is above the random baseline line. AUC of 0.67 is reasonable for a
 
 EdgeConv was chosen because it naturally handles point cloud data. It does not assume a fixed grid and works directly on the local neighbourhood of each node. This makes it a better fit for jet events than a standard CNN, since the energy deposits are sparse and irregular.
 
-The main limitation is the cap of 100 nodes per graph. We keep the 100 highest energy pixels to save memory. This discards some low energy deposits that could carry useful information. With more compute, removing this cap would likely improve AUC.
+The main limitation is the cap of 100 nodes per graph. I kept the 100 highest energy pixels to save memory. This discards some low energy deposits that could carry useful information. With more compute, removing this cap would likely improve AUC.
 
 ---
 
@@ -96,7 +96,7 @@ Output: energy for Tracks, ECAL, HCAL at that coordinate
 
 One INR is fit per event. 800 gradient steps with Adam. After fitting, the network can be queried at any resolution.
 
-### Problems we ran into
+### Problems I ran into
 
 **Problem 1: Shape mismatch error.**
 The values tensor was coming out as shape (375, 3) instead of (15625, 3). This caused a RuntimeError during training. The cause was that numpy's `.T` on a reshaped array returns a non-contiguous array, and PyTorch misread its shape. Fixed by adding `.copy()` after the transpose, which forces a proper contiguous array.
