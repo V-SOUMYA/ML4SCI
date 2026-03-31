@@ -2,8 +2,6 @@
 
 !pip install torch-geometric --quiet
 
-import h5py, numpy as np, matplotlib.pyplot as plt, torch
-import torch.nn as nn, torch.nn.functional as F, random
 from sklearn.metrics import roc_auc_score, roc_curve
 from torch_geometric.data import Data
 from torch_geometric.loader import DataLoader as GeoLoader
