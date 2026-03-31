@@ -1,5 +1,5 @@
 # Task 2: Jets as Graphs (GNN Classifier)
----
+
 ### What I did
 
 Converted jet images into graphs and trained a Graph Neural Network to classify them as quark or gluon.
