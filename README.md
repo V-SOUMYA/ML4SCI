@@ -140,9 +140,7 @@ pip install torch-geometric
 
 
 Dataset path:
-
 /content/drive/MyDrive/ml4sci_dataset.hdf5
-
 
 ---
 
