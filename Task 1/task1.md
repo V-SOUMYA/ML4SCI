@@ -5,32 +5,6 @@ The project I am applying for is **Learning Parametrization with Implicit Neural
 
 ---
 
-## What's in here
-
-```
-├── task1_autoencoder/
-│   ├── task1_autoencoder.ipynb
-│   ├── raw_events.png
-│   ├── training_curve.png
-│   ├── reconstruction_comparison.png
-│   └── README.md
-│
-├── task2_gnn/
-│   ├── task2_gnn.ipynb
-│   └── README.md
-│
-├── task_specific2_inr/
-│   ├── task_specific2_inr.ipynb
-│   └── README.md
-│
-└── task_specific1_contrastive/
-    ├── task_specific1_contrastive.ipynb
-    └── README.md
-```
-
-
----
-
 ## What I did
 
 Trained a convolutional autoencoder on 5000 jet events.
