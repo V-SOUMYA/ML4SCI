@@ -3,7 +3,7 @@ Soumya Vajahhala | Rutgers University
 
 ---
 
-## 🚀 Overview
+##  Overview
 
 This repository contains my solutions to the **ML4SCI GENIE GSoC 2026 evaluation tasks**.
 
@@ -17,7 +17,7 @@ I implemented and compared three approaches:
 
 ---
 
-## 📊 Key Results
+##  Key Results
 
 | Method        | PSNR (dB) | SSIM  | AUC   |
 |--------------|----------|-------|-------|
@@ -27,7 +27,7 @@ I implemented and compared three approaches:
 
 ---
 
-## 🧠 Task 1 — Autoencoder (Reconstruction)
+##  Task 1 — Autoencoder (Reconstruction)
 
 A convolutional autoencoder was trained to learn a compact latent representation of jet events.
 
@@ -41,11 +41,11 @@ A convolutional autoencoder was trained to learn a compact latent representation
 - **SSIM: ~0.999** → near-perfect structural preservation  
 - Accurate reconstruction across all channels  
 
-![Autoencoder Reconstruction](task1_autoencoder/reconstruction_comparison.png)
+<img width="651" height="541" alt="image" src="https://github.com/user-attachments/assets/82ec55e6-8de6-4cb2-95eb-85687559235f" />
 
 ---
 
-## 🔗 Task 2 — Graph Neural Network (Classification)
+##  Task 2 — Graph Neural Network (Classification)
 
 Jet images were converted into graphs by treating non-zero pixels as nodes and connecting them using nearest neighbors.
 
@@ -60,11 +60,11 @@ Jet images were converted into graphs by treating non-zero pixels as nodes and c
 
 The model captures relational structure and performs reasonably well given the dataset size.
 
-![GNN ROC Curve](task2_gnn/roc_curve.png)
+<img width="586" height="489" alt="image" src="https://github.com/user-attachments/assets/18bb43d6-ad30-450f-886d-bad7f43a0b3c" />
 
 ---
 
-## 🔥 Implicit Neural Representation (INR)
+##  Implicit Neural Representation (INR)
 
 Each jet event was represented as a **continuous function** instead of a fixed grid.
 
@@ -79,15 +79,15 @@ Each jet event was represented as a **continuous function** instead of a fixed g
 
 INR achieves reconstruction quality comparable to the autoencoder despite being a continuous representation.
 
-### ⭐ Key Advantage: Resolution Independence
+###  Key Advantage: Resolution Independence
 
 The same trained INR can be queried at different resolutions (64×64, 125×125, 250×250) **without retraining**, while preserving structure.
 
-![INR Resolution Demo](task_specific2_inr/inr_resolution_demo.png)
+<img width="1256" height="324" alt="image" src="https://github.com/user-attachments/assets/aa983ae4-66de-42b4-95f0-c26d95e8b4a6" />
 
 ---
 
-## 📌 Key Insights
+##  Key Insights
 
 - Autoencoders provide strong reconstruction with compact latent representations  
 - GNNs capture relational and geometric structure for classification  
@@ -95,29 +95,32 @@ The same trained INR can be queried at different resolutions (64×64, 125×125, 
 
 ---
 
-## 📁 Repository Structure
+##  Repository Structure
+
+```
 ML4SCI/
 │
 ├── task1_autoencoder/
-│ ├── task1_autoencoder.ipynb
-│ ├── raw_events.png
-│ ├── training_curve.png
-│ ├── reconstruction_comparison.png
-│ └── README.md
+│   ├── task1_autoencoder.ipynb
+│   ├── raw_events.png
+│   ├── training_curve.png
+│   ├── reconstruction_comparison.png
+│   └── README.md
 │
 ├── task2_gnn/
-│ ├── task2_gnn.ipynb
-│ └── README.md
+│   ├── task2_gnn.ipynb
+│   └── README.md
 │
 ├── task_specific2_inr/
-│ ├── task_specific2_inr.ipynb
-│ └── README.md
+│   ├── task_specific2_inr.ipynb
+│   └── README.md
 │
 ├── task_specific1_contrastive/
-│ ├── task_specific1_contrastive.ipynb
-│ └── README.md
+│   ├── task_specific1_contrastive.ipynb
+│   └── README.md
 │
 └── Ml4Sci.pdf
+```
 
 
 Each folder contains:
@@ -127,7 +130,7 @@ Each folder contains:
 
 ---
 
-## ▶️ How to Run
+##  How to Run
 
 - Open notebooks in **Google Colab**  
 - Enable GPU (Runtime → T4 GPU recommended)
