@@ -1,5 +1,4 @@
 # ML4SCI GENIE — GSoC 2026 Evaluation Tasks  
-Soumya Vajahhala | Rutgers University  
 
 ---
 
